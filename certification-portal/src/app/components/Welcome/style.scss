@@ -1,0 +1,290 @@
+@use "@/app/scss/variables" as *;
+
+main{
+    @include full-width;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    .left{
+        width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .vector{
+        height: rem(100) !important;
+        width: rem(100) !important;
+
+        @include breakpoint(tablet){
+            height: rem(120) !important;
+            width: rem(120) !important;
+        }
+
+        @include breakpoint(laptop){
+            height: rem(100) !important;
+            width: rem(100) !important;
+        }
+    }
+
+    .vector-2{
+        position: relative !important;
+        left: 14px;
+        height: rem(100) !important;
+        width: rem(100) !important;
+
+        @include breakpoint(tablet){
+            height: rem(150) !important;
+            width: rem(150) !important;
+        }
+    }
+
+    .image{
+        position: relative !important;
+        left: - rem(30);
+        height: rem(120) !important;
+        width: rem(120) !important;
+
+        @include breakpoint(tablet){
+            height: rem(150) !important;
+        }
+
+        @include breakpoint(laptop){
+            height: rem(120) !important;
+        }
+    }
+
+    .red-circle{
+        height: rem(80) !important;
+        position: relative;
+        bottom: rem(20);
+
+        @include breakpoint(tablet){
+            height: rem(90) !important;
+        }
+
+        @include breakpoint(laptop){
+            height: rem(80) !important;
+        }
+    }
+        
+        .img{
+            width: rem(150);
+            height: rem(150);
+
+            img{
+                width: 100% !important;
+                height: 100% !important;
+                position: relative !important;
+            }
+        }
+    }
+    .right{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .green-circle{
+            height: rem(50) !important;
+            width: rem(50) !important;
+            margin-right: rem(50);
+
+            @include breakpoint(tablet){
+                height: rem(80) !important;
+                width: rem(80) !important;
+            }
+
+            @include breakpoint(laptop){
+                height: rem(60) !important;
+                width: rem(60) !important;
+                margin-right: rem(100);
+            }
+        }
+
+        .wrapper{
+
+            .vector-10{
+                height: rem(80) !important;
+                position: relative;
+                left: rem(10);
+
+                @include breakpoint(tablet){
+                    height: rem(150) !important;
+                    width: rem(150) !important;
+                }
+
+                @include breakpoint(laptop){
+                    height: rem(130) !important;
+                    width: rem(130) !important;
+                }
+            }
+
+            .vector-5{
+                height: rem(70) !important;
+                position: relative;
+                right: rem(20);
+                bottom: rem(15);
+
+                @include breakpoint(tablet){
+                    height: rem(100) !important;
+                    width: rem(100) !important;
+                }
+
+                @include breakpoint(laptop){
+                    height: rem(80) !important;
+                    width: rem(80) !important;
+                }
+            }
+
+            .vector-6{
+                height: rem(60) !important;
+                margin-top: rem(15);
+                position: relative;
+                left: rem(10);
+
+                @include breakpoint(tablet){
+                    height: rem(90) !important;
+                    width: rem(90) !important;
+                }
+
+                @include breakpoint(laptop){
+                    height: rem(70) !important;
+                    width: rem(70) !important;
+                }
+            }
+        }
+
+        .vector-7{
+            height: rem(60) !important;
+            position: relative;
+            right: rem(30);
+            bottom: rem(40);
+
+            @include breakpoint(tablet){
+                height: rem(100) !important;
+                width: rem(100) !important;
+            }
+
+            @include breakpoint(laptop){
+                height: rem(60) !important;
+                width: rem(60) !important;
+                right: rem(120);
+            }
+        }
+
+        .vector-4{
+            height: rem(120) !important;
+            width: rem(55) !important;
+            position: relative;
+            top: 0;
+
+            @include breakpoint(tablet){
+                height: rem(150) !important;
+                width: rem(60) !important;
+            }
+        }
+        
+        .img{
+            width: rem(100);
+            height: rem(100);
+
+            img{
+                width: 100% !important;
+                height: 100% !important;
+                position: relative !important;
+            }
+        }
+    }
+
+    .middle{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: rem(30);
+        width: 40%;
+
+        .logo{
+            align-self: center;
+            width: rem(130) !important;
+
+            @include breakpoint(tablet){
+                height: rem(80);
+                width: rem(150);
+            }
+
+            img{
+                position: relative !important;
+            }
+        }
+
+        .welcome{
+            width: 100%;
+            align-self: center;
+
+            .welcome-text{
+                font-size: rem(12);
+                font-family: $poppins;
+                font-weight: 400;
+                text-align: center;
+
+                @include breakpoint(tablet){
+                    font-size: rem(16)
+                }
+
+                @include breakpoint(laptop){
+                    font-size: rem(18);
+                }
+            }
+        }
+
+        #btn{
+            background: none;
+            border: none;
+            width: rem(100);
+            height: rem(40);
+            align-self: center;
+            background-color: $blue;
+            border-radius: rem(10);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: rem(10);
+            color: $light;
+            text-decoration: none;
+
+            @include breakpoint(tablet){
+                height: rem(50);
+                width: rem(120);
+                font-size: rem(16);
+            }
+
+            @include breakpoint(laptop){
+                height: rem(40) !important;
+                width: rem(120) !important;
+            }
+            
+            &:hover{
+                cursor: pointer;
+            }
+
+            &:active{
+                background-color: $light;
+                color: $dark;
+            }
+
+            svg{
+                height: 15px;
+                color: $light;
+
+                &:active{
+                    background-color: $light;
+                    color: $dark;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,335 @@
+@use "@/app/scss/variables" as *;
+
+main{
+    @include full-width;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    .left{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .wrapper{
+            margin-top: rem(50);
+
+            @include breakpoint(tablet){
+                margin-top: rem(66);
+            }
+
+            .vector-2{
+                height: rem(84);
+                width: rem(84);
+                position: relative;
+                left: 0;
+
+                @include breakpoint(tablet){
+                    height: rem(132) !important;
+                    width: rem(132) !important;
+                }
+
+                @include breakpoint(laptop){
+                    height: rem(100) !important;
+                    width: rem(100) !important;
+                }
+            }
+
+            .vector-5{
+                height: rem(54);
+                width: rem(54);
+                position: relative;
+                left: rem(65);
+
+                @include breakpoint(tablet){
+                    height: rem(102) !important;
+                    width: rem(182) !important;
+                }
+
+                @include breakpoint(laptop){
+                    height: rem(70) !important;
+                    width: rem(150) !important;
+                }
+            }
+
+            .vector-4{
+                height: rem(54);
+                width: rem(54);
+                position: relative;
+                left: rem(10);
+
+                @include breakpoint(tablet){
+                    height: rem(166) !important;
+                    width: rem(102) !important;
+                }
+
+                @include breakpoint(laptop){
+                    height: rem(102) !important;
+                    width: rem(70) !important;
+                }
+            }
+        }
+
+        .vector-3{
+            height: rem(68);
+            width: rem(68);
+            position: relative;
+            left: rem(24);
+
+            @include breakpoint(tablet){
+                height: rem(164) !important;
+                width: rem(132) !important;
+            }
+
+            @include breakpoint(laptop){
+                height: rem(116) !important;
+                width: rem(212) !important;
+            }
+        }
+
+        .vector-1{
+            height: rem(186);
+            width: rem(69);
+
+            @include breakpoint(tablet){
+                height: rem(218) !important;
+                width: rem(101) !important;
+            }
+
+            @include breakpoint(laptop){
+                height: rem(170) !important;
+                width: rem(70) !important;
+            }
+        }
+
+        .green-circle{
+            height: rem(50);
+            width: rem(50);
+            align-self: end;
+            position: relative;
+
+            @include breakpoint(tablet){
+                height: rem(66) !important;
+                width: rem(66) !important;
+            }
+
+            @include breakpoint(laptop){
+                height: rem(50) !important;
+                width: rem(50) !important;
+            }
+        }
+
+        .img{
+
+            img{
+                height: 100% !important;
+                width: 100% !important;
+                position: relative !important;
+            }
+        }
+    }
+
+    .right{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: self-end;
+        justify-content: space-between;
+
+        .vector-6{
+            height: rem(80);
+            width: rem(80);
+            position: relative;
+            left: rem(10);
+
+            @include breakpoint(tablet){
+                height: rem(128) !important;
+                width: rem(128) !important;
+            }
+
+            @include breakpoint(laptop){
+                height: rem(96) !important;
+                width: rem(96) !important;
+            }
+        }
+
+        .vector-7{
+            height: rem(88);
+            position: relative;
+            right: rem(30);
+            bottom: rem(70);
+
+            @include breakpoint(tablet){
+                height: rem(262) !important;
+                width: rem(168) !important;
+            }
+
+            @include breakpoint(laptop){
+                height: rem(150) !important;
+                width: rem(248) !important;
+                bottom: rem(22);
+            }
+        }
+
+        .vector-8{
+            height: rem(104);
+            width: rem(39);
+
+            @include breakpoint(tablet){
+                height: rem(216) !important;
+                width: rem(87) !important;
+            }
+
+            @include breakpoint(laptop){
+                height: rem(152) !important;
+                width: rem(55) !important;
+            }
+        }
+
+        .vector-9{
+            align-self: flex-start;
+            height: rem(74);
+            width: rem(74);
+
+            @include breakpoint(tablet){
+                height: rem(154) !important;
+                width: rem(122) !important;
+            }
+
+            @include breakpoint(laptop){
+                height: rem(186) !important;
+                width: rem(106) !important;
+            }
+        }
+
+        .img{
+            img{
+                height: 100%;
+                width: 100%;
+                position: relative !important;
+            }
+        }
+    }
+
+    .middle{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        gap: rem(15);
+        position: relative;
+        left: rem(20);
+
+        .email{
+            text-align: center;
+            font-size: rem(18);
+            font-family: $poppins;
+            font-weight: 600;
+
+            @include breakpoint(tablet){
+                font-size: rem(25) !important;
+            }
+        }
+
+        .input-gmail{
+            width: 120%;
+            height: rem(40);
+            background-color: $background-color;
+            color: $text-color;
+            border: none;
+            padding-inline: rem(10);
+            border-radius: rem(10);
+            position: relative;
+            right: rem(13);
+            font-size: rem(20);
+            line-height: rem(39);
+
+            @include breakpoint(tablet){
+                width: 115% !important;
+                height: rem(72) !important;
+                right: rem(30);
+                font-size: rem(25) !important;
+                padding-inline: rem(15);
+            }
+
+            @include breakpoint(laptop){
+                right: 0;
+                height: rem(56) !important;
+                width: 50% !important;
+                font-size: rem(20) !important;
+                padding-inline: rem(20);
+                align-self: center;
+            }
+
+            &::placeholder{
+                position: absolute;
+                right: 0;
+                padding-inline: rem(10);
+                font-size: rem(16) !important;
+
+                @include breakpoint(tablet){
+                    font-size: rem(20) !important;
+                    padding-inline: rem(15);
+                }
+            }
+        }
+
+        #btn{
+            align-self: center;
+            text-decoration: none;
+            width: rem(100);
+            height: rem(40);
+            background-color: $blue;
+            border-radius: rem(10);
+            border: none;
+
+            a{
+                text-decoration: none;
+                color: $light;
+                display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: rem(10);
+            }
+
+            @include breakpoint(tablet){
+                height: rem(66) !important;
+                width: rem(152) !important;
+                font-size: rem(25);
+            }
+
+            @include breakpoint(laptop){
+                height: rem(50) !important;
+                width: rem(136) !important;
+                font-size: rem(20);
+            }
+
+            &:hover{
+                cursor: pointer;
+            }
+
+            &:active{
+                background-color: $light;
+                color: $dark;
+            }
+        }
+
+        .go-back{
+            align-self: center;
+            color: $dark;
+            font-size: rem(14);
+            font-family: $poppins;
+            font-weight: 500;
+
+            @include breakpoint(tablet){
+                font-size: rem(18);
+            }
+
+            @include breakpoint(laptop){
+               font-size: rem(12);
+            }
+        }
+    }
+}
