@@ -249,12 +249,16 @@ main{
             align-self: center;
             background-color: $blue;
             border-radius: rem(10);
-            display: flex;
+            text-decoration: none;
+
+            a{
+                text-decoration: none;
+                color: $light;
+                display: flex;
             align-items: center;
             justify-content: center;
             gap: rem(10);
-            color: $light;
-            text-decoration: none;
+            }
 
             @include breakpoint(tablet){
                 height: rem(50);
